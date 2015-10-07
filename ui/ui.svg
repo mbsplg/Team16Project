@@ -14,7 +14,7 @@
    id="svg3097"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="ui.svg">
+   sodipodi:docname="storyboard.svg">
   <defs
      id="defs3099" />
   <sodipodi:namedview
@@ -24,16 +24,16 @@
      borderopacity="0.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="0"
-     inkscape:zoom="0.36995569"
-     inkscape:cx="-1691.5649"
-     inkscape:cy="2120.6118"
+     inkscape:zoom="0.73991138"
+     inkscape:cx="-2809.2663"
+     inkscape:cy="528.74771"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="968"
+     inkscape:window-height="1058"
      inkscape:window-x="0"
-     inkscape:window-y="49"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      showguides="true" />
   <metadata
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -9910,7 +9910,7 @@
          id="text13229"
          y="-2181.6052"
          x="-382.26566"
-         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';letter-spacing:0px;word-spacing:0px;fill:#800000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+         style="font-size:40px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#800000;fill-opacity:1;stroke:none;font-family:sans-serif;-inkscape-font-specification:sans-serif Bold Italic"
          xml:space="preserve"><tspan
            y="-2181.6052"
            x="-382.26566"
@@ -9923,7 +9923,7 @@
            id="tspan13235"
            y="-2081.6052"
            x="-382.26566"
-           sodipodi:role="line">friends</tspan></text>
+           sodipodi:role="line">friend</tspan></text>
     </g>
     <g
        id="g13659">
@@ -16641,5 +16641,23 @@
         </g>
       </g>
     </g>
+    <rect
+       style="fill:#ffd5d5;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect11142"
+       width="51.357502"
+       height="48.654476"
+       x="-3789.6428"
+       y="740.1626" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-3722.0674"
+       y="780.70801"
+       id="text11144"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan11146"
+         x="-3722.0674"
+         y="780.70801">Remember Password</tspan></text>
   </g>
 </svg>
