@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="0"
      inkscape:zoom="0.36995569"
-     inkscape:cx="-185.02146"
-     inkscape:cy="-258.05143"
+     inkscape:cx="-1691.5649"
+     inkscape:cy="2120.6118"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -10609,15 +10609,15 @@
          y="-405.16299">Back</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-60.545395"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif"
+       x="-28.545395"
        y="-403.9751"
        id="text13835"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan13837"
-         x="-60.545395"
-         y="-403.9751">Update</tspan></text>
+         x="-28.545395"
+         y="-403.9751">Edit</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m -443.29633,-833.05328 589.25976,-2.70302"
