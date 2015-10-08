@@ -1,0 +1,52 @@
+public void testAddItem(InventoryItem item){
+
+	Inventory inv = new Inventory();
+	inv.addItem(item);
+	assertTrue(inv.contains(item));
+
+}
+
+public void testRemoveItem(InventoryItem item){
+	Inventory.inv = new Inventory();
+	inv.addItem(item);
+	assertTrue(inv.contains(item));
+	inv.removeItem(item);
+	assertFalse(inv.contains(item));
+}
+
+public void testEditItem(){
+	//There will be a function for editing each
+	//property.  This is testing one example.
+	InventoryItem item = new InventoryItem;
+	item.setQuantity(3);
+	item.editQuantity(5);
+	assertTrue(item.getQuantity = 5);
+}
+
+public void addAccount(String username){
+	Accounts account = new Account();
+	Profile profile = new Profile(username);
+	assertFalse(account.contains(profile));
+	account.add(profile);
+	assertTrue(account.contains(profile));
+}
+
+public void editFriends(){
+	Friend friend = new Friend();
+	Profile profile = new Profile();
+	assertFalse(profile.hasFriend(friend));
+	profile.addFriend(friend);
+	assertTrue(profile.hasFriend(friend));
+	profile.removeFriend(friend);
+	assertFalse(profile.hasFriend(friend));
+}
+
+
+	
+
+
+
+
+
+
+	
