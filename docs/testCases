@@ -45,8 +45,140 @@ public void editFriends(){
 	
 
 
+public void testEditOwnerProfile(){
+    Owner owner = new Owner("Bob", "Edmonton", "7809648989",17,"bob@ualberta.ca");
+    owner.changeCity("Calgray");
+    owner.changeCell("7809877654");
+    owner.changeAge(18);
+    assertTrue(owner.city == "Calgary");
+    assertTrue(owner.cell == "7809877654");
+    assertTrue(owner.age == "18");
+
+}
+
+public void testViewOwnerTrades(){
+    Owner owner = new Owner("Bob", "Edmonton", "7809648989",17,"bob@ualberta.ca");
+    Borrower borrower = new Borrower("Alice","Edmonton","",17,"");
+
+    CsBook csBook = new CsBook("Introduction to Algorithms",1,"new","This is nearly like new book");
+    MathBook mathBook = new MathBook("Discrete Mathmatics", 1, "old", "Nice book!");
+
+    owner.addInventory(csBook);
+    borrower.addInventory(mathBook);
+
+    Trade trade = new Trade(borrower, owner, csBook, mathBook);
+
+    borrower.addTrade(trade);
+
+    ArrayList<Trade> tradeList = new ArrayList<Trade>();
+    tradeList.add(trade);
+
+    assertTrue(borrower.tradeList.get(0) == tradeList.get(0));
+
+
+}
 
 
 
+public void testEditPendingTrade(){
+    Owner owner = new Owner("Bob", "Edmonton", "7809648989",17,"bob@ualberta.ca");
+    Borrower borrower = new Borrower("Alice","Edmonton","",17,"");
 
-	
+    CsBook csBook = new CsBook("Introduction to Algorithms",1,"new","This is nearly like new book");
+    MathBook mathBook = new MathBook("Discrete Mathmatics", 1, "old", "Nice book!");
+    ArtBook artBook = new ArtBook("How to draw 3rd ed",1);
+
+    owner.addInventory(csBook);
+    borrower.addInventory(mathBook);
+    borrower.addInventory(artBook);
+
+    Trade trade = new Trade(borrower, owner, csBook, mathBook);
+
+    borrower.addTrade(trade);
+
+    borrower.editTrade(trade, csBook, artBook);
+
+    assertTrue(trade.out == artBook);
+
+
+    }
+
+public void testRemovePendingTrade(){
+    Owner owner = new Owner("Bob", "Edmonton", "7809648989",17,"bob@ualberta.ca");
+    Borrower borrower = new Borrower("Alice","Edmonton","",17,"");
+
+    CsBook csBook = new CsBook("Introduction to Algorithms",1,"new","This is nearly like new book");
+    MathBook mathBook = new MathBook("Discrete Mathmatics", 1, "old", "Nice book!");
+    ArtBook artBook = new ArtBook("How to draw 3rd ed",1);
+
+    owner.addInventory(csBook);
+    borrower.addInventory(mathBook);
+    borrower.addInventory(artBook);
+
+    Trade trade = new Trade(borrower, owner, csBook, mathBook);
+
+    borrower.addTrade(trade);
+
+    borrower.removeTrade(trade);
+
+    assertTrue(borrower.getTrades().size() == 0);
+
+
+    }
+
+
+public void testViewFriends(){
+    Owner owner = new Owner("Bob", "Edmonton", "7809648989",17,"bob@ualberta.ca");
+    Borrower borrower = new Borrower("Alice","Edmonton","",17,"");
+
+    owner.addFriend(borrower);
+
+    assertTrue(owner.getFriends().get(0) == borrower);
+
+    }
+
+public void testProposeTrade(){
+    Owner owner = new Owner("Bob", "Edmonton", "7809648989",17,"bob@ualberta.ca");
+    Borrower borrower = new Borrower("Alice","Edmonton","",17,"");
+
+    CsBook csBook = new CsBook("Introduction to Algorithms",1,"new","This is nearly like new book");
+    MathBook mathBook = new MathBook("Discrete Mathmatics", 1, "old", "Nice book!");
+    ArtBook artBook = new ArtBook("How to draw 3rd ed",1);
+
+    owner.addInventory(csBook);
+    borrower.addInventory(mathBook);
+    borrower.addInventory(artBook);
+
+    Trade trade = new Trade(borrower, owner, csBook, mathBook);
+
+    borrower.proposeTrade(trade);
+
+    assertTrue(owner.getTrades().get(0) == trade);
+
+
+    owner.removeTrade(trade);
+
+    assertTrue(borrower.getTrades().size() == 0);
+
+
+
+    }
+
+
+public void testConfigImageDownload(){
+    Owner owner = new Owner("Bob", "Edmonton", "7809648989",17,"bob@ualberta.ca");
+
+    owner.editImageconfig(1);
+
+    assertTrue(owner.imageDownload == Boolean.TRUE);
+
+    owner.editImageconfig(0);
+
+    assertTrue(owner.imageDownload == Boolean.FALSE);
+
+
+
+    }
+
+
+    	
