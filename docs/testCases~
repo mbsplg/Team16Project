@@ -47,7 +47,7 @@ public void editFriends(){
 
 public void testEditOwnerProfile(){
     Owner owner = new Owner("Bob", "Edmonton", "7809648989",17,"bob@ualberta.ca");
-    owner.changeCity("Calgary");
+    owner.changeCity("Calgray");
     owner.changeCell("7809877654");
     owner.changeAge(18);
     assertTrue(owner.city == "Calgary");
@@ -170,48 +170,15 @@ public void testConfigImageDownload(){
 
     owner.editImageconfig(1);
 
-    assertTrue(owner.imageDownload);
+    assertTrue(owner.imageDownload == Boolean.TRUE);
 
     owner.editImageconfig(0);
 
-    assertFalse(owner.imageDownload);
+    assertTrue(owner.imageDownload == Boolean.FALSE);
 
 
 
     }
 
-public void testOwnerSearchesForBorrower(){
-       
-       String name = searchBar.getText();
-       ArrayList searchresults = searchForProfile(name);
-       assertTrue(searchresults.contains(name);
 
-}
-
-public void testSelectsBorrowerFromSearch(){
-       
-       String username = getUsernameFromClickListener;
-       Profile profile = getProfileFromUsername(username);
-       Profiles.displayProfile(profile);
-       assertTrue(profileIsDisplayed(profile);
-
-}
-
-public void testOwnerSearchesUniversalInventory(){
-
-       String item = searchBar.getText();
-       ArrayList searchresults = Profiles.searchItems(item);
-       for(SearchResult result : searchresults){
-       		assertTrue(result.searchStrings().contains(item));
-	}
-}
-
-public void testOwnerSearchesPersonalInventory(){
-       
-       String item = searchBar.getText();
-       ArrayList searchresults = Owner.Inventory().searchItems(item);
-       for(SearchResult result : searchresults){
-       		 assertTrue(result.searchStrings().contains(item));
-        }
-}
     	
