@@ -10,7 +10,7 @@ public class Profile {
     private int age;
     private String gender;
     private String email;
-    private Bitmap selfie;
+    private Bitmap photo;
     private String phoneNumber;
     private String cityName;
 
@@ -74,12 +74,12 @@ public class Profile {
         this.email = email;
     }
 
-    public Bitmap getSelfie() {
-        return selfie;
+    public Bitmap getPhoto() {
+        return photo;
     }
 
-    public void setSelfie(Bitmap selfie) {
-        this.selfie = selfie;
+    public void setPhoto(Bitmap photo) {
+        this.photo = photo;
     }
 
     public String getPhoneNumber() {
