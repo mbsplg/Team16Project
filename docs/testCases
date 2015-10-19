@@ -41,10 +41,6 @@ public void editFriends(){
 	assertFalse(profile.hasFriend(friend));
 }
 
-
-	
-
-
 public void testEditOwnerProfile(){
     Owner owner = new Owner("Bob", "Edmonton", "7809648989",17,"bob@ualberta.ca");
     owner.changeCity("Calgary");
