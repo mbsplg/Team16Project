@@ -1,4 +1,4 @@
-package sidoruk.myapplication;
+package team16project.textbooktrader;
 
 /**
  * Created by BSid on 15-10-19.

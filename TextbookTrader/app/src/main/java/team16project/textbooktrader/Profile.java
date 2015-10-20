@@ -1,5 +1,6 @@
-
+package team16project.textbooktrader;
 import android.graphics.Bitmap;
+
 
 /**
  * Created by jiahui on 10/18/15.
