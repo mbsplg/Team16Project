@@ -6,12 +6,16 @@ import java.util.ArrayList;
  */
 public interface Search {
 
-    //Searching for items
-    public InventoryItem search();
+    /*
+    jiahui changed this file on 21/Oct/2015
+     */
 
-    //Searching for freinds
-    public Profile search();
+    //Searching for items
+    Item searchItem();
+
+    //Searching for friends
+    Profile searchProfile();
 
     //Searching a previous trade made
-    public Trade search();
+    Trade searchTrade();
 }
