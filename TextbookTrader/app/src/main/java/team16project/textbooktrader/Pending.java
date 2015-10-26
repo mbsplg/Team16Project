@@ -18,7 +18,6 @@ public class Pending {
     //An owner can accept the friend request or deny it
     private boolean friendResult;
 
-
 }
 
     //Pending  can get the owner of the request
