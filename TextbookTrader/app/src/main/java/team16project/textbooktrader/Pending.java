@@ -18,8 +18,6 @@ public class Pending {
     //An owner can accept the friend request or deny it
     private boolean friendResult;
 
-}
-
     //Pending  can get the owner of the request
     public User getOwner() {
         return owner;
@@ -57,3 +55,4 @@ public class Pending {
         this.friendResult = Boolean.FALSE;
         //remove from list of pending friend requests
     }
+}

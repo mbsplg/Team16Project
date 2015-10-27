@@ -15,8 +15,6 @@ public class Login {
     //If user wants to remember password
     private boolean rememberPass;
 
-}
-
     //Pending  can get the owner of the request
     public String getUsername() {
         return username;
@@ -44,7 +42,8 @@ public class Login {
         //display that the login failed and ask user to try again
     }
 
-    publi void yesRememberPass() {
-            this.rememberPass = Boolean.TRUE;
-            //remember password next time user opens app
-            }
+    public void yesRememberPass() {
+        this.rememberPass = Boolean.TRUE;
+        //remember password next time user opens app
+    }
+}

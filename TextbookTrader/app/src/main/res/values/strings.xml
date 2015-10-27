@@ -20,5 +20,5 @@
     <string name="profile_cell_button">Cell</string>
     <string name="profile_age_button">Age</string>
     <string name="profile_gender_button">Gender</string>
-    <string name="profile_comment_button">What's up</string>
+    <string name="profile_comment_button">What\'s up</string>
 </resources>
