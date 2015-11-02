@@ -9,13 +9,5 @@ public interface Search {
     /*
     jiahui changed this file on 21/Oct/2015
      */
-
-    //Searching for items
-    Item searchItem();
-
-    //Searching for friends
-    Profile searchProfile();
-
-    //Searching a previous trade made
-    Trade searchTrade();
+    ArrayList search();
 }
