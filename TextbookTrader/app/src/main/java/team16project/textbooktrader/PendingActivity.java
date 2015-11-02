@@ -1,20 +1,16 @@
 package team16project.textbooktrader;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
 
-public class PendingActivity extends AppCompatActivity {
+public class PendingActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_friend_list);
-
-        //there are two lists so this will have to be worked on to display properly
-        ListView listView = (ListView)findViewById(R.id.pendingListView);
+        setContentView(R.layout.activity_pending);
     }
 
     @Override
