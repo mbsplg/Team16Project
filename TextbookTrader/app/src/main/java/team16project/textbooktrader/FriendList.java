@@ -8,7 +8,7 @@ public class FriendList {
     private ArrayList<Profile> friendList;
 
     public FriendList() {
-        this.friendList = new ArrayList<>(1);
+        this.friendList = new ArrayList<Profile>(1);
     }
 
     public void add(Profile profile) {
