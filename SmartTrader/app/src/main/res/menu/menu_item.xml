@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD:TextbookTrader/app/src/main/res/menu/menu_main.xml
+    tools:context="team16project.textbooktrader.MainActivity">
+
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" android:showAsAction="never" />
+
+=======
+    tools:context="com.loveboyuan.smarttrader.ItemActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+>>>>>>> 2a5c198175b8b85d81b45fa8cca0fb9b08a48a14:SmartTrader/app/src/main/res/menu/menu_item.xml
+</menu>
