@@ -28,14 +28,24 @@ public class MainActivity extends AppCompatActivity {
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // first we want to get the string representation of the clicked text
                 String activityName = mAdapter.getItem(position).toString();
-                activityName.concat("Activity");
                 Toast.makeText(MainActivity.this, activityName, Toast.LENGTH_SHORT).show();
+                // then get the actual class name with corresponding prefix(package name)
+                // and postfix(Activity)
+                activityName = "com.loveboyuan.smarttrader." + activityName + "Activity";
                 Intent intent = null;
-
-                intent = new Intent(MainActivity.this, InventoryActivity.class);
-
-                startActivity(intent);
+                // Note here we launch an activity based on the string representation of it
+                try {
+                    // Class.forName yields the Class object associated with the class or interface
+                    // with the given string name
+                    // from https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html
+                    intent = new Intent(MainActivity.this, Class.forName(activityName));
+                    startActivity(intent);
+                } catch (ClassNotFoundException e) {
+                    // this exception could be made impossible to trigger
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -64,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addDrawerItems() {
-        String[] osArray = { "Pending" , "Inventory", "Friends", "TradeHistory" };
+        String[] osArray = { "Profile", "Pending" , "Inventory", "Friends", "TradeHistory" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
     }
