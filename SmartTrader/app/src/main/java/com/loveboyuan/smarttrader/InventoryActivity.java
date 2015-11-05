@@ -1,11 +1,14 @@
 package com.loveboyuan.smarttrader;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -25,9 +28,6 @@ public class InventoryActivity extends AppCompatActivity{
         final ArrayAdapter<Item> inventoryAdapter = new ArrayAdapter<Item>(this, android.R.layout.simple_list_item_1, list);;
         inventoryListView.setAdapter(inventoryAdapter);
 
-    //    InventoryController.getInventoryModel().addItem(new Item("a","b",1,"c",Boolean.TRUE,"d","e"));
-
-
 
         InventoryController.getInventoryModel().addMyObserver(new MyObserver() {
             @Override
@@ -36,6 +36,43 @@ public class InventoryActivity extends AppCompatActivity{
                 Collection<Item> item = InventoryController.getInventoryModel().getInventory();
                 list.addAll(item);
                 inventoryAdapter.notifyDataSetChanged();
+            }
+        });
+
+
+        // show inventory item
+        inventoryListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
+
+
+        // remove inventory item
+        inventoryListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+
+                AlertDialog.Builder adb = new AlertDialog.Builder(InventoryActivity.this);
+                adb.setMessage("Delete " + list.get(position).toString() + "?");
+                adb.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Item item = list.get(position);
+                        InventoryController.getInventoryModel().removeItem(item);
+                    }
+                });
+                adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                adb.show();
+
+
+                return false;
             }
         });
     }

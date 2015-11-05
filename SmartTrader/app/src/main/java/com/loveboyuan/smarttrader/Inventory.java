@@ -26,6 +26,7 @@ public class Inventory implements Search{
 
     public void removeItem(Item item){
         inventory.remove(item);
+        this.notifyAllObservers();
 
     }
 
